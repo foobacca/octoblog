@@ -3,7 +3,7 @@ layout: post
 title: "python 2.7 on debian squeeze"
 date: 2013-03-31 18:35
 comments: true
-categories: 
+categories: notmuch python
 ---
 *This post is part of my [notmuch of a journey series](/blog/2013/03/notmuch/)*.
 
