@@ -25,3 +25,6 @@ blog on [wordpress](http://wookielove.wordpress.com). I also hang out on
 In the past (1998-99) I did some [travelling across Asia](/asia.html) - follow 
 the link to read the emails I wrote while travelling.
 
+<a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
+
+Reuse my stuff - all blog posts are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.
