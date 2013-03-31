@@ -17,7 +17,7 @@ It's taken a lot of research and playing with various tools.  Some of those tool
 So here are the parts - I've put up a post about each major part, and all the small bits and links are part of this post.
 
 * two copies of notmuch
-* offlineimap and msmtp - including the thorny issue of password storage on a headless server
+* [offlineimap and msmtp](/blog/2013/03/offlineimap-and-msmtp/) - including the thorny issue of password storage on a headless server
 * python 2.7 - pythonbrew, all dev libraries, pythonz
 * the mail client - alot
 * initial tagging and afew

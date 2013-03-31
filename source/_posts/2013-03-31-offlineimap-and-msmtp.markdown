@@ -5,6 +5,8 @@ date: 2013-03-31 16:52
 comments: true
 categories: notmuch offlineimap msmtp password-storage
 ---
+*This post is part of my [notmuch of a journey series](/blog/2013/03/notmuch/)*.
+
 notmuch doesn't get my email or send it, so I'm turning to two commonly used tools to help me with this.
 
 * [offlineimap](http://docs.offlineimap.org/en/latest/MANUAL.html) fetches the email over IMAP (and syncs it back)
