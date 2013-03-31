@@ -74,3 +74,7 @@ I was moving folders around and was having trouble working out whether the folde
     openssl s_client -connect mail.aptivate.org:993
 
 and then run the above commands.
+
+### Other ways of sending to multiple accounts
+
+In my research, I also found that you can set up [postfix to use different servers for different accounts](http://paul.frields.org/2009/07/12/best-in-show/) (though I'm not sure how well it would handle encrypted passwords) and I may improve my msmtp set up by using [msmtp queue](https://wiki.archlinux.org/index.php/Msmtp#Using_msmtp_offline) at some point, and see how well it deals with encrypted passwords.
