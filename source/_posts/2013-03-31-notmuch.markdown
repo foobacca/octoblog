@@ -1,0 +1,38 @@
+---
+layout: post
+title: "Notmuch of a journey"
+date: 2013-03-31 15:26
+comments: true
+categories: notmuch
+---
+
+I recently decided to switch to using notmuch as a mail indexer.  I've been a long time user of [sup](https://github.com/sup-heliotrope/sup) and love the command line interface, gmail-like threads and awesome search.  However it can often be a bit cranky and slow, and it "doesn't play well with others" - if the mbox files it uses are modified (say by a second imap client) then it needs to rebuild it's index.  I could live with all those and used it for my work email for about three years.
+
+The real nail in the coffin is that it has mostly died as a project.  I have made quite a few commits to it over the years, and it gets the occasional bug fix, but the mailing list has dropped off to nothing over the years.  There was some excitement when the original author of sup, William Morgan, announced [heliotrope](https://github.com/sup-heliotrope/heliotrope) and [turnsole](https://github.com/sup-heliotrope/turnsole) as a client server version, but it never really gained traction.
+
+So I decided to investigate [notmuch](http://notmuchmail.org/) - which is basically a C program and library which takes your email and gives it to Xapian (a full test search database) and then runs queries against it.  But notmuch does ... not much else, so I also need to fetch email, add the new emails to notmuch, run a mail client, send email and look up email addresses.
+
+It's taken a lot of research and playing with various tools.  Some of those tools were great, but poorly documented, so part of the point of these blog posts is to give some info for other people to find.  And I might even get round to adding to the documentation for some of these projects.
+
+So here are the parts - I've put up a post about each major part, and all the small bits and links are part of this post.
+
+* two copies of notmuch
+* offlineimap and msmtp - including the thorny issue of password storage on a headless server
+* python 2.7 - pythonbrew, all dev libraries, pythonz
+* the mail client - alot
+* initial tagging and afew
+* address book
+* custom reports
+* future projects
+
+## Two copies of notmuch
+
+I run two copies of notmuch - one for my gmail account and one for my work one.  I want to keep them separate, so I have set up a parallel config.  The default file is `~/.notmuch-config` and I have added `~/.notmuch-config-work`  You can tell notmuch to use it via an enviroment variable - `$NOTMUCH_CONFIG` - but I don't want to set that all the time, so I have a file `~/bin/notmuchwork` with the contents:
+
+    NOTMUCH_CONFIG=~/.notmuch-config-work notmuch $@
+
+and then have an alias set up in my `.bashrc`:
+
+    alias nmw=$HOME/bin/notmuchwork
+
+I have similar set up for alot and afew - although for those you can define the config path on the command line rather than through an environment variable.  This is necessary as they access notmuch through the python library rather than through the command line.
