@@ -20,6 +20,7 @@ So here are the parts - I've put up a post about each major part, and all the sm
 * [offlineimap and msmtp](/blog/2013/03/offlineimap-and-msmtp/) - including the thorny issue of password storage on a headless server
 * [python 2.7](/blog/2013/03/python-2-dot-7-on-debian-squeeze/) - pythonbrew, all dev libraries, pythonz
 * [initial tagging and afew](/blog/2013/03/initial-tagging-and-afew/)
+* adding a RegexFilter to afew
 * the mail client - alot
 * address book
 * custom reports
@@ -36,3 +37,7 @@ and then have an alias set up in my `.bashrc`:
     alias nmw=$HOME/bin/notmuchwork
 
 I have similar set up for alot and afew - although for those you can define the config path on the command line rather than through an environment variable.  This is necessary as they access notmuch through the python library rather than through the command line.
+
+## My dotfiles
+
+My dotfiles have all of my config and can be found at https://github.com/foobacca/dotfiles.git - have fun poking around.
