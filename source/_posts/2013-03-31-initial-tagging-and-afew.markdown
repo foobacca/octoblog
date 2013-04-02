@@ -22,9 +22,9 @@ There are several ways to do this, but the way I've done it is:
 The tags added by `notmuch new` are set in the notmuch config file, in the part that looks like:
 
     [new]
-    tags=new;unread;inbox
+    tags=new
 
-So all new messages will have those tags added.  Your `post-new` hook can then run only against mail that is tagged "new", making it nice and fast.  And as the final step, the `post-new` hooks should remove the "new" tag from all messages that have it, so that you don't have to re-process them next time.
+So all new messages will have those tags added.  Your `post-new` hook can then run only against mail that is tagged "new", making it nice and fast.  And as the final step, the `post-new` hooks should remove the "new" tag from all messages that have it, so that you don't have to re-process them next time.  A common idea is also to remove the "new" tag from messages that match filters you want to archive, and at the end of your filter list you replace the "new" tag with the "inbox" tag for any messages still tagged "new".
 
 You can do this with a basic shell script that calls the notmuch command line binary, as shown on the [notmuch initial tagging page](http://notmuchmail.org/initial_tagging/).  However the command line binary only looks at a few headers (From, To, Cc, Subject, Date and message ID as far as I can tell).  So I thought I'd look into:
 
@@ -117,18 +117,18 @@ The equivalent in afew would be:
     [ArchiveSentMailsFilter]
 
     [Filter.spamcom]
-    message = 'Delete all messages from spammer'
-    query = 'from:spam@spam.com'
+    message = Delete all messages from spammer
+    query = from:spam@spam.com
     tags = deleted;-new
 
     [Filter.notmuch]
-    message = 'Tag all messages from the notmuch mailing list'
-    query = 'to:notmuch@notmuchmail.org'
+    message = Tag all messages from the notmuch mailing list
+    query = to:notmuch@notmuchmail.org
     tags = notmuch
 
     [Filter.myinbox]
-    message = 'My version of the inbox filter'
-    query = 'tag:new'
+    message = My version of the inbox filter
+    query = tag:new
     tags = inbox;unread;-new
 
 Not that the queries do not include `tag:new` because this is implied when afew is run with the `--new` flag.
