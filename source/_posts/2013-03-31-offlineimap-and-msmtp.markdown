@@ -62,6 +62,27 @@ So I could have set up a password-less ssh key to do this, or left an ssh sessio
 
 ## Other notes
 
+### sendmail over ssh
+
+Another option for sending email to a remote server is to use the sendmail command over ssh (assuming you have ssh access to the server in question).  First you need to generate a passwordless ssh key and copy it to the mail server:
+
+    ssh-keygen -t dsa -f ~/.ssh/id_mail_smtp
+    scp ~/.ssh/id_mail_smtp.pub smtpserver.example.org:.ssh/
+
+Then, on the mail server, put the key in the authorized_keys file:
+
+    cat ~/.ssh/id_mail_smtp.pub >> ~/.ssh/authorized_keys
+
+Next we edit the authorized keys file, adding the command to run to the beginning of the last line (which is currently our smtp key):
+
+    command="/usr/sbin/sendmail -bm -t -oem -oi",no-X11-forwarding,no-agent-forwarding,no-port-forwarding,no-pty ssh-dss AAA...
+
+In this case the `command` is the sendmail command for exim.  Finally, in your mail client, tell it to use ssh as the sendmail command.  The following works for both mutt and alot:
+
+    ssh -q -i /home/hamish/.ssh/id_mail_smtp smtpserver.example.org
+
+Now whenever your mail client wants to send email, it will start up the ssh connection and print the email to it.  This will be picked up by the sendmail command on the far end and off the email will go.
+
 ### Checking IMAP mailboxes
 
 I was moving folders around and was having trouble working out whether the folders were available but offlineimap was failing to find them, or if dovecot wasn't showing me the folders.  Eventually I found [how to ask for a folder list over telnet](http://wiki.dovecot.org/MissingMailboxes). In short:
