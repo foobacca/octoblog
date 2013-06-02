@@ -7,14 +7,17 @@ sharing: true
 footer: true
 ---
 I am Hamish Downer, a wookie programmer and sys admin, hence foobacca. I 
-have a presence on 
-[about.me](http://about.me/hamishdowner), 
-[github](http://github.com/foobacca),
-[linkedin](http://www.linkedin.com/pub/hamish-downer/40/b03/872),
-[facebook](http://www.facebook.com/hamish.downer),
-[twitter](http://twitter.com/hgd20) and [identi.ca](http://identi.ca/hgd20) (as hgd20), 
-[launchpad](https://launchpad.net/~mishd), 
-and I occasionally 
+have a presence on:
+
+* <a href="http://about.me/hamishdowner" rel="me">about.me</a>
+* <a href="https://github.com/foobacca" rel="me">github</a>
+* <a href="https://www.linkedin.com/pub/hamish-downer/40/b03/872" rel="me">linkedin</a>
+* <a href="https://www.facebook.com/hamish.downer" rel="me">facebook</a>
+* <a href="https://twitter.com/hgd20" rel="me">twitter</a>
+* <a href="https://alpha.app.net/foobacca" rel="me">twitter</a>
+* <a href="https://launchpad.net/~mishd" rel="me">launchpad</a>
+
+And I occasionally 
 blog on [wordpress](http://wookielove.wordpress.com). I also hang out on
 [stackoverflow](http://stackoverflow.com/users/3189/hamish-downer), 
 [serverfault](http://serverfault.com/users/629/hamish-downer),
