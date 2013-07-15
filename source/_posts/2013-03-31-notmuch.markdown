@@ -20,7 +20,7 @@ So here are the parts - I've put up a post about each major part, and all the sm
 * [offlineimap and msmtp](/blog/2013/03/offlineimap-and-msmtp/) - including the thorny issue of password storage on a headless server
 * [python 2.7](/blog/2013/03/python-2-dot-7-on-debian-squeeze/) - pythonbrew, all dev libraries, pythonz
 * [initial tagging and afew](/blog/2013/03/initial-tagging-and-afew/)
-* adding a RegexFilter to afew
+* [adding a HeaderMatchingFilter to afew](/blog/2013/07/matching-headers-with-regular-expressions-using-afew/)
 * the mail client - alot
 * address book
 * custom reports
