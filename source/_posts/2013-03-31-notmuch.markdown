@@ -8,17 +8,17 @@ categories: notmuch
 
 I recently decided to switch to using notmuch as a mail indexer.  I've been a long time user of [sup](https://github.com/sup-heliotrope/sup) and love the command line interface, gmail-like threads and awesome search.  However it can often be a bit cranky and slow, and it "doesn't play well with others" - if the mbox files it uses are modified (say by a second imap client) then it needs to rebuild it's index.  I could live with all those and used it for my work email for about three years.
 
-The real nail in the coffin is that it has mostly died as a project.  I have made quite a few commits to it over the years, and it gets the occasional bug fix, but the mailing list has dropped off to nothing over the years.  There was some excitement when the original author of sup, William Morgan, announced [heliotrope](https://github.com/sup-heliotrope/heliotrope) and [turnsole](https://github.com/sup-heliotrope/turnsole) as a client server version, but it never really gained traction.
+The real nail in the coffin is that it has mostly died as a project (though there have been a few new people stepping up recently).  I have made quite a few commits to it over the years, and it gets the occasional bug fix, but the mailing list has dropped off to nothing over the years.  There was some excitement when the original author of sup, William Morgan, announced [heliotrope](https://github.com/sup-heliotrope/heliotrope) and [turnsole](https://github.com/sup-heliotrope/turnsole) as a client server version, but it never really gained traction.
 
-So I decided to investigate [notmuch](http://notmuchmail.org/) - which is basically a C program and library which takes your email and gives it to Xapian (a full test search database) and then runs queries against it.  But notmuch does ... not much else, so I also need to fetch email, add the new emails to notmuch, run a mail client, send email and look up email addresses.
+So I decided to investigate [notmuch](http://notmuchmail.org/) - which is basically a C program and library which takes your email and gives it to Xapian (a full text search database - also used by sup under the hood) and then runs queries against it.  But notmuch does ... not much else, so I also need to fetch email, add the new emails to notmuch, run a mail client, send email and look up email addresses.
 
 It's taken a lot of research and playing with various tools.  Some of those tools were great, but poorly documented, so part of the point of these blog posts is to give some info for other people to find.  And I might even get round to adding to the documentation for some of these projects.
 
 So here are the parts - I've put up a post about each major part, and all the small bits and links are part of this post.
 
 * two copies of notmuch
-* [offlineimap and msmtp](/blog/2013/03/offlineimap-and-msmtp/) - including the thorny issue of password storage on a headless server
-* [python 2.7](/blog/2013/03/python-2-dot-7-on-debian-squeeze/) - pythonbrew, all dev libraries, pythonz
+* [offlineimap and msmtp](/blog/2013/03/offlineimap-and-msmtp/) - including the thorny issue of password storage on a headless server (hint: use single purpose password-less ssh keys).
+* [python 2.7 on debian squeeze](/blog/2013/03/python-2-dot-7-on-debian-squeeze/) - pythonbrew, all dev libraries, pythonz (bit out of date now that wheezy is stable).
 * [initial tagging and afew](/blog/2013/03/initial-tagging-and-afew/)
 * [adding a HeaderMatchingFilter to afew](/blog/2013/07/matching-headers-with-regular-expressions-using-afew/)
 * the mail client - alot

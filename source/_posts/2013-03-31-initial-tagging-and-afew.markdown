@@ -156,4 +156,4 @@ Here are a few more example filters from github dotfiles:
     tags = -inbox;-new
     message = notmuch emacs stuff
 
-I wanted to do a bit more powerful processing, so I've written a RegexFilter, but more on that in a future blog post.
+If you need more powerful processing you can write filters that match regular expressions against any header in the email with the HeaderMatchingFilter, but more on that in a future blog post.

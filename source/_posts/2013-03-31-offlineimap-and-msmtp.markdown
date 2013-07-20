@@ -40,25 +40,37 @@ I found a [blog post describing caching the decrypted password in environment va
 
 ### Leave offlineimap running in tmux
 
-When you run offlineimap, if there is no password or passwordeval in the `.offlineimaprc` file, then offlineimap will ask for your password (provided the ui isn't set to be Noninteractive).  offlineimap can also be told to run repeatedly, without exiting, by putting `autorefresh = 5` to re-run every 5 minutes.  In between runs, offlineimap will just sit at the terminal waiting, but it remembers your password, keeping it in memory.
-
-This is what I went for, as I can leave offlineimap running for months inside tmux on the server I use.
+When you run offlineimap, if there is no password or passwordeval in the `.offlineimaprc` file, then offlineimap will ask for your password (provided the ui isn't set to be Noninteractive).  offlineimap can also be told to run repeatedly, without exiting, by putting `autorefresh = 5` to re-run every 5 minutes.  In between runs, offlineimap will just sit at the terminal waiting, but it remembers your password, keeping it in memory.  Using this I could leave offlineimap running for months inside tmux on the server I use.
 
 (Note that offlineimap will not ask for your password if the `ui` is set to be Noninteractive.  And the `autorefresh` setting must be in the `[Account X]` section - I put it in the Repository section originally which didn't work).
 
-### offlineimap preauthtunnel
+### ssh keys and offlineimap preauthtunnel
 
-One other option I found, but didn't use in the end, was to use the `preauthtunnel` option.  This uses a ssh connection to connect to the server and talk to the imap software on the other end.
+Finally I worked out that I could talk directly to an imap command line utility on the remote server over ssh - using a passwordless ssh key to avoid any passwords.  offlineimap is instructed to use it by the `preauthtunnel` option.
 
-The relevant command for courier IMAP is:
+There are two main IMAP servers in the linux world, courier and dovecot.  The relevant commands are:
 
-    preauthtunnel = ssh -q imaphost '/usr/bin/imapd ./Maildir'
+    # Courier IMAP (Debian - you should check the path on CentOS)
+    preauthtunnel = ssh -o Compression=yes -q IMAPHOST '/usr/bin/imapd ./Maildir'
+    
+    # Dovecot IMAP (CentOS)
+    preauthtunnel = ssh -o Compression=yes -q IMAPHOST 'MAIL=maildir:~/Maildir exec /usr/libexec/dovecot/imap'
+    # Dovecot IMAP (Debian)
+    preauthtunnel = ssh -o Compression=yes -q IMAPHOST 'MAIL=maildir:~/Maildir exec /usr/lib/dovecot/imap'
 
-And for dovecot it is:
+Replace `IMAPHOST` and `~/Maildir` with your own values.
 
-    preauthtunnel = ssh -o Compression=yes -q imaphost 'MAIL=maildir:~/Maildir exec /usr/lib/dovecot/imap'
+There are two ways to do this so that you don't have to enter the ssh key passphrase all the time.  You could set up a password-less ssh key to do this, or you could leave an ssh session running so that offlineimap can [multiplex its connections](http://protempore.net/~calvins/howto/ssh-connection-sharing/) on to it.
 
-So I could have set up a password-less ssh key to do this, or left an ssh session running that offlineimap could have [multiplexed its connections](http://protempore.net/~calvins/howto/ssh-connection-sharing/) on to.
+A password-less ssh key leads to the possibility of abuse, but you can generate a new ssh key just for imap and specify it's use by modifying the above command to look like:
+
+    preauthtunnel = ssh -q -i /home/hamish/.ssh/id_mail_imap -o Compression=yes IMAPHOST '/usr/libexec/dovecot/imap'
+
+On the mail server side you can then lock down this key by configuring what command can be run in the `.ssh/authorized_keys` file.  Mine looks like:
+
+    command="/usr/libexec/dovecot/imap",no-X11-forwarding,no-agent-forwarding,no-port-forwarding,no-pty ssh-dss AAAAB3Nza...
+
+Obviously this will only work for you if you have ssh access to your mail server, so it won't be an option for all.  But I've given some other options above, so I hope you can find something that works for you.
 
 ## Other notes
 
@@ -77,7 +89,7 @@ Next we edit the authorized keys file, adding the command to run to the beginnin
 
     command="/usr/sbin/sendmail -bm -t -oem -oi",no-X11-forwarding,no-agent-forwarding,no-port-forwarding,no-pty ssh-dss AAA...
 
-In this case the `command` is the sendmail command for exim.  Finally, in your mail client, tell it to use ssh as the sendmail command.  The following works for both mutt and alot:
+In this case the `command` is the sendmail command for exim - I'm afraid you'll have to work out what your own sendmail command is.  Finally, in your mail client, tell it to use ssh as the sendmail command.  The following works for both mutt and alot:
 
     ssh -q -i /home/hamish/.ssh/id_mail_smtp smtpserver.example.org
 
