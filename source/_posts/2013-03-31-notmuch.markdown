@@ -19,11 +19,11 @@ So here are the parts - I've put up a post about each major part, and all the sm
 * two copies of notmuch
 * [offlineimap and msmtp](/blog/2013/03/offlineimap-and-msmtp/) - including the thorny issue of password storage on a headless server (hint: use single purpose password-less ssh keys).
 * [python 2.7 on debian squeeze](/blog/2013/03/python-2-dot-7-on-debian-squeeze/) - pythonbrew, all dev libraries, pythonz (bit out of date now that wheezy is stable).
-* [initial tagging and afew](/blog/2013/03/initial-tagging-and-afew/)
-* [adding a HeaderMatchingFilter to afew](/blog/2013/07/matching-headers-with-regular-expressions-using-afew/)
-* the mail client - alot
+* [initial tagging and afew](/blog/2013/03/initial-tagging-and-afew/) - how to automatically add tags to new email.
+* [adding a HeaderMatchingFilter to afew](/blog/2013/07/matching-headers-with-regular-expressions-using-afew/) - so you can use regular expression matches against any header for adding tags.
+* [custom reports](/blog/2013/07/custom-reports-with-notmuch/) - showing thread counts in various tags.
 * address book
-* custom reports
+* the mail client - alot
 * future projects
 
 ## Two copies of notmuch
