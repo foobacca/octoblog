@@ -40,4 +40,4 @@ I have similar set up for alot and afew - although for those you can define the 
 
 ## My dotfiles
 
-My dotfiles have all of my config and can be found at https://github.com/foobacca/dotfiles.git - have fun poking around.
+My [dotfiles are on github](https://github.com/foobacca/dotfiles.git) have all of my config - have fun poking around.
