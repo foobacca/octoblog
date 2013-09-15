@@ -52,7 +52,7 @@ There are two main IMAP servers in the linux world, courier and dovecot.  The re
 
     # Courier IMAP (Debian - you should check the path on CentOS)
     preauthtunnel = ssh -o Compression=yes -q IMAPHOST '/usr/bin/imapd ./Maildir'
-    
+
     # Dovecot IMAP (CentOS)
     preauthtunnel = ssh -o Compression=yes -q IMAPHOST 'MAIL=maildir:~/Maildir exec /usr/libexec/dovecot/imap'
     # Dovecot IMAP (Debian)
@@ -94,6 +94,28 @@ In this case the `command` is the sendmail command for exim - I'm afraid you'll 
     ssh -q -i /home/hamish/.ssh/id_mail_smtp smtpserver.example.org
 
 Now whenever your mail client wants to send email, it will start up the ssh connection and print the email to it.  This will be picked up by the sendmail command on the far end and off the email will go.
+
+### ssh ControlMaster
+
+`ControlMaster` is an ssh option that means you can leave an ssh connection open with a master session, so that future ssh connections reuse the master session rather than having to start an entirely new connection.  This should mean quicker send and receive.  One way to specify it in your `~/.ssh/config` file is:
+
+    ControlMaster auto
+    ControlPersist 4h
+    ControlPath /home/username/.ssh/muxcontrol/%r@%h:%p
+
+This means that connections will be automatically started, will stick around for up to 4 hours, and the socket for your connection to `mail.example.com` on port 22 with username `user` would be at `/home/username/.ssh/muxcontrol/name@mail.example.com:22` (don't forget to create the directory).  (And the default directory is the global `/tmp` directory).
+
+However a gotcha here is that the connection to the host will use whatever ssh key was used for the initial connection, not the one specified at the command line.  So if offlineimap runs first, using your ssh key tied to the imap command, then when you try to send an email using sendmail over ssh, then your ssh command will run imap rather than sendmail - and your email will go nowhere.
+
+The solution is to specify a different `ControlPath` for these commands.  So for offlineimap you could use:
+
+    preauthtunnel = ssh -o Compression=yes -o ControlPath=/home/username/.ssh/muxcontrol/IMAP_%r@%h:%p -q IMAPHOST 'MAIL=maildir:~/Maildir exec /usr/libexec/dovecot/imap'
+
+and for sending:
+
+    ssh -q -o ControlPath=/home/username/.ssh/muxcontrol/SMTP_%r@%h:%p -i /home/hamish/.ssh/id_mail_smtp smtpserver.example.org
+
+This will keep more ssh connections active, but the right action will be done using your different ssh keys.
 
 ### Checking IMAP mailboxes
 
