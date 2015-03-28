@@ -72,11 +72,6 @@ github_skip_forks: true
 twitter_user: hgd20
 twitter_tweet_button: true
 
-# app.net
-adn_user: foobacca
-adn_post_count: 5
-adn_show_replies: false
-
 # Google +1
 google_plus_one: false
 google_plus_one_size: medium
