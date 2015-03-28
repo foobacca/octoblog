@@ -77,4 +77,4 @@ The second command means that it should be [re-applied on boot and when waking f
 
 ## Swapping Caps Lock and Escape
 
-The easy way of doing this through the standard keyboard settings has been removed, sadly.  So I installed `gnome-tweak-tool` and found the settings in there.  [See screenshots of keyboard settings]().
+The easy way of doing this through the standard keyboard settings has been removed, sadly.  So I installed `gnome-tweak-tool` and found the settings in there.  [See screenshots of keyboard settings](http://askubuntu.com/a/446725/150).
