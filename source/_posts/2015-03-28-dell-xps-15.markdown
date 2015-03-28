@@ -1,0 +1,80 @@
+---
+layout: post
+title: "Dell XPS 15"
+date: 2015-03-28 10:48
+comments: true
+categories: 
+---
+# Getting Ubuntu 15.04 set up on a Dell XPS 15 (9530)
+
+## HiDPI
+
+The Dell XPS 15 has a gorgeous screen, 15", 3200x1800.  This means that things can appear very small.  Here are the things I did to make it usable.
+
+* the [display settings have a scaling slider](http://askubuntu.com/a/462023/150) - from 1.5 to 2 should work OK.
+* firefox - you need to open `about:config` and change the value of `layout.css.devPixelsPerPx` to between 1.5 and 2.
+* chrome - todo
+
+Then there are the parts outside of the X display - grub and the console, which I like to be usable:
+
+### grub
+
+Stealing from [the testing goat HiDPI post](http://www.obeythetestinggoat.com/ot-hidpi-on-ubuntu-with-a-samsung-ativ-9.html):
+
+> You'll have noticed that the GRUB boot menu is in a ridiculously small font because of all our teeny-tiny pixels. Fix it by generating a new font in 30-point:
+> 
+>     sudo grub-mkfont -s 30 -o /boot/grub/DejaVuSansMono.pf2 /usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf
+> 
+> DejaVu works well because it has all the glyphs for the line art, others may not work so well.
+> 
+> Edit `/etc/default/grub` and add a line saying `GRUB_FONT=/boot/grub/DejaVuSansMono.pf2`, and run `update-grub` to commit.
+
+### TTY console
+
+Stealing more from [the testing goat HiDPI post](http://www.obeythetestinggoat.com/ot-hidpi-on-ubuntu-with-a-samsung-ativ-9.html):
+
+> One final thing that's pretty much unusable out of the box are the TTY consoles you get from pressing, eg, CTRL+ALT+F1. To change their font, you'll want to do a:
+> 
+>     sudo dpkg-reconfigure console-setup
+> 
+> I picked the VGA font in 32x16, and it looks fine, if somewhat retro.
+
+## Touchpad Middle Button
+
+The touchpad worked pretty well out of the box.  Two finger scrolling was smooth, but ...
+
+I really like using the middle button in Linux, for pasting selected text, opening links in a new browser tab, closing browser tabs ...  But I couldn't find a way to make it work.  Various people mentioned that the top right corner of the touchpad/clickpad should work, but it didn't for me.  Eventually I worked out how to do it with synclient.  First I had to look up all the sizes of stuff.  It's a long list, but here are the relevant results:
+
+    $ synclient -l
+    Parameter settings:
+        LeftEdge                = 1765
+        RightEdge               = 5367
+        TopEdge                 = 1634
+        BottomEdge              = 4420
+    # lots of stuff
+        RightButtonAreaLeft     = 3566
+        RightButtonAreaRight    = 0
+        RightButtonAreaTop      = 4063
+        RightButtonAreaBottom   = 0
+        MiddleButtonAreaLeft    = 0
+        MiddleButtonAreaRight   = 0
+        MiddleButtonAreaTop     = 0
+        MiddleButtonAreaBottom  = 0
+
+And realised I might be able to set the `MiddleButtonArea*` settings, and it did indeed work.  I created a file, `~/bin/touchpad_settings.sh` with the following contents:
+
+    #!/bin/sh
+    # set up the top right corner as middle button
+    synclient MiddleButtonAreaBottom=2000
+    synclient MiddleButtonAreaLeft=3566
+
+Then in the shell:
+
+    $ chmod +x ~/bin/touchpad_settings.sh
+    $ gsettings set org.gnome.settings-daemon.peripherals.input-devices hotplug-command "/home/hamish/bin/touchpad_settings.sh"
+
+The second command means that it should be [re-applied on boot and when waking from sleep](http://askubuntu.com/a/156545).
+
+## Swapping Caps Lock and Escape
+
+The easy way of doing this through the standard keyboard settings has been removed, sadly.  So I installed `gnome-tweak-tool` and found the settings in there.  [See screenshots of keyboard settings]().
