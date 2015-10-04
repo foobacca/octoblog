@@ -12,10 +12,11 @@ have a presence on:
 * <a href="http://about.me/hamishdowner" rel="me">about.me</a>
 * <a href="https://github.com/foobacca" rel="me">github</a>
 * <a href="https://twitter.com/hgd20" rel="me">twitter</a>
+* <a href="https://plus.google.com/u/0/102616221256017791739/posts" rel="me">google plus</a>
 * <a href="https://www.linkedin.com/pub/hamish-downer/40/b03/872" rel="me">linkedin</a>
 * <a href="https://launchpad.net/~mishd" rel="me">launchpad</a>
 
-I used to blog on [wordpress](http://wookielove.wordpress.com).
+I used to blog on [wordpress](http://wookielove.wordpress.com) and have written a number of [blog posts for Aptivate](http://aptivate.org/en/blog/author/hamish/).
 I also hang out on
 [stackoverflow](http://stackoverflow.com/users/3189/hamish-downer), 
 [askubuntu](http://askubuntu.com/users/150/hamish-downer) and 
