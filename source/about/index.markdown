@@ -21,6 +21,8 @@ I also hang out on
 [askubuntu](http://askubuntu.com/users/150/hamish-downer) and 
 [other stack exchange sites](https://stackexchange.com/users/2297/hamish-downer).
 
+I often spend time with the [Cambridge Lindy Hoppers](http://www.cambridgelindy.com/) and help run [day retreats in the insight tradition](https://cambridgedayretreats.wordpress.com/).
+
 In the past (1998-99) I did some travelling across Asia - and you can still [read the emails I wrote while on the road](/asia.html).
 
 <a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
