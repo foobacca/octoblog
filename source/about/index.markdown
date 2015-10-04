@@ -15,16 +15,13 @@ have a presence on:
 * <a href="https://www.linkedin.com/pub/hamish-downer/40/b03/872" rel="me">linkedin</a>
 * <a href="https://launchpad.net/~mishd" rel="me">launchpad</a>
 
-And I occasionally 
-blog on [wordpress](http://wookielove.wordpress.com). I also hang out on
+I used to blog on [wordpress](http://wookielove.wordpress.com).
+I also hang out on
 [stackoverflow](http://stackoverflow.com/users/3189/hamish-downer), 
-[serverfault](http://serverfault.com/users/629/hamish-downer),
-[superuser](http://superuser.com/users/1630/hamish-downer),
-[askubuntu](http://askubuntu.com/users/150/hamish-downer) and
-[photo.se](http://photo.stackexchange.com/users/130/hamish-downer).
+[askubuntu](http://askubuntu.com/users/150/hamish-downer) and 
+[other stack exchange sites](https://stackexchange.com/users/2297/hamish-downer).
 
-In the past (1998-99) I did some [travelling across Asia](/asia.html) - follow 
-the link to read the emails I wrote while travelling.
+In the past (1998-99) I did some travelling across Asia - and you can still [read the emails I wrote while on the road](/asia.html).
 
 <a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
 
