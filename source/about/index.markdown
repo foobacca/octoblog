@@ -11,10 +11,8 @@ have a presence on:
 
 * <a href="http://about.me/hamishdowner" rel="me">about.me</a>
 * <a href="https://github.com/foobacca" rel="me">github</a>
-* <a href="https://www.linkedin.com/pub/hamish-downer/40/b03/872" rel="me">linkedin</a>
-* <a href="https://www.facebook.com/hamish.downer" rel="me">facebook</a>
 * <a href="https://twitter.com/hgd20" rel="me">twitter</a>
-* <a href="https://alpha.app.net/foobacca" rel="me">twitter</a>
+* <a href="https://www.linkedin.com/pub/hamish-downer/40/b03/872" rel="me">linkedin</a>
 * <a href="https://launchpad.net/~mishd" rel="me">launchpad</a>
 
 And I occasionally 
