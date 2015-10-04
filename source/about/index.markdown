@@ -22,6 +22,8 @@ I also hang out on
 [askubuntu](http://askubuntu.com/users/150/hamish-downer) and 
 [other stack exchange sites](https://stackexchange.com/users/2297/hamish-downer).
 
+I have given a few conference talks including [reducing page sizes with Django](https://github.com/foobacca/reduce-django-page-size) and [OOD Rules](https://github.com/foobacca/ood-rules) (object oriented design rules).  I also often [take notes at conferences](https://foobacca.github.io/foobacca-event-notes/).
+
 I often spend time with the [Cambridge Lindy Hoppers](http://www.cambridgelindy.com/) and help run [day retreats in the insight tradition](https://cambridgedayretreats.wordpress.com/).
 
 In the past (1998-99) I did some travelling across Asia - and you can still [read the emails I wrote while on the road](/asia.html).
