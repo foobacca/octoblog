@@ -19,7 +19,7 @@ More on my own time I've been obsessed with mail clients including coding for [s
 
 ## Writing
 
-As well as [this blog](/) I used to blog on [wordpress](http://wookielove.wordpress.com) and have written a number of [blog posts for Aptivate](http://aptivate.org/en/blog/author/hamish/).  And in the days before blogs (1998-99) I spent a year [travelling across Asia, writing emails as I went](/asia.html).
+As well as [this blog](/) I used to blog on [wordpress](http://wookielove.wordpress.com) and have written a number of [blog posts for Aptivate](http://aptivate.org/en/blog/author/hamish/).  And in the days before blogs (1998-99) I spent a year [travelling across Asia, writing emails as I went](/oldsite/asia.html).
 
 I've also written plenty of technical content on 
 [stackoverflow](http://stackoverflow.com/users/3189/hamish-downer), 
