@@ -9,8 +9,7 @@ I am Hamish Downer, a wookie programmer and sys admin, hence foobacca.
 
 ## Coding
 
-I can be found on <a href="https://github.com/foobacca" rel="me">github</a> (and an older account on <a href="https://launchpad.net/~mishd" rel="me">launchpad</a>).  
-Open source code I've worked on professionally that I'm proud of includes:
+I can be found on <a href="https://github.com/foobacca" rel="me">github</a> (and an older account on <a href="https://launchpad.net/~mishd" rel="me">launchpad</a>).  Open source code I've worked on professionally that I'm proud of includes:
 
 * [trademapper](https://github.com/trademapper/trademapper-js) - built to map the trade in endangered species
 * [API](https://github.com/oriel-hub/api) for a content hub for IDS
@@ -32,7 +31,7 @@ I've also written plenty of technical content on
 I have given a few conference talks including: 
 
 * [reducing page sizes with Django](https://github.com/foobacca/reduce-django-page-size) - PyConUK 2013
-* [OOD Rules](https://github.com/foobacca/ood-rules) (object oriented design rules) - PyConUK 2013
+* [OOD Rules](https://github.com/foobacca/ood-rules) (object oriented design rules) - PyConUK 2015
 
 I also often [take notes at conferences](https://foobacca.github.io/foobacca-event-notes/).
 
