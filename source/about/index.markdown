@@ -16,7 +16,7 @@ have a presence on:
 * <a href="https://www.linkedin.com/pub/hamish-downer/40/b03/872" rel="me">linkedin</a>
 * <a href="https://launchpad.net/~mishd" rel="me">launchpad</a>
 
-I used to blog on [wordpress](http://wookielove.wordpress.com) and have written a number of [blog posts for Aptivate](http://aptivate.org/en/blog/author/hamish/).
+As well as [this blog](/) I used to blog on [wordpress](http://wookielove.wordpress.com) and have written a number of [blog posts for Aptivate](http://aptivate.org/en/blog/author/hamish/).
 I also hang out on
 [stackoverflow](http://stackoverflow.com/users/3189/hamish-downer), 
 [askubuntu](http://askubuntu.com/users/150/hamish-downer) and 
