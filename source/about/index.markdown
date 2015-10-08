@@ -31,7 +31,7 @@ I've also written plenty of technical content on
 I have given a few conference talks including: 
 
 * [reducing page sizes with Django](https://github.com/foobacca/reduce-django-page-size) - PyConUK 2013
-* [OOD Rules](https://github.com/foobacca/ood-rules) (object oriented design rules) - PyConUK 2015
+* [OOD Rules](https://github.com/foobacca/ood-rules) (object oriented design rules) - PyConUK 2015 - [video of talk](https://www.youtube.com/watch?v=65yqxxLnj2I)
 
 I also often [take notes at conferences](https://foobacca.github.io/foobacca-event-notes/).
 
