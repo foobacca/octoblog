@@ -15,7 +15,7 @@ I can be found on <a href="https://github.com/foobacca" rel="me">github</a> (and
 * [API](https://github.com/oriel-hub/api) (python/django) for a content hub for IDS
 * [dye](https://github.com/aptivate/dye) (Deploy Your Environment) (python) - a set of script for deploying Django applications, along with a project cookiecutter.  It ended up being slightly too tied to our internal project and server set up to be widely reusable, but there's some good stuff in there.
 
-More on my own time I've been obsessed with mail clients including coding for [sup](https://github.com/sup-heliotrope/sup) (ruby) and some tools around [notmuch](http://notmuchmail.org) including [notmuch-abook](https://github.com/foobacca/notmuch-abook) and [afew](https://github.com/foobacca/afew) (both python).  I also made a pebble watchface called [very fuzzy time](https://github.com/foobacca/very-fuzzy-pebble) (C) - so my watch will sometimes say it is "two ish" or "getting on for five".
+More on my own time I've been obsessed with mail clients including coding for [sup](https://github.com/sup-heliotrope/sup) (ruby) and some tools around [notmuch](http://notmuchmail.org) including [notmuch-abook](https://github.com/foobacca/notmuch-abook) and [afew](https://github.com/foobacca/afew) (both python).  I also made a pebble watchface called [very fuzzy time](https://github.com/foobacca/very-fuzzy-pebble) (using C) - so my watch will sometimes say it is "two ish" or "getting on for five".
 
 ## Writing
 
