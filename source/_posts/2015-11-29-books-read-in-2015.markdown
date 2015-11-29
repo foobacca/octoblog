@@ -1,0 +1,40 @@
+---
+layout: post
+title: "Books read in 2015"
+date: 2015-11-29 21:51
+comments: true
+categories: 
+---
+
+general reading experience - back to books over breakfast, holidays
+
+Pregnancy
+
+Bump, Food of Love
+Bumpology
+
+Politics, History etc
+
+- The Joy of Tax
+- The Great War for Civilisation - Robert Fisk - started
+
+Science, Tech, Work
+
+- Irrationality
+- POODR
+- 2 Scoops of Django 1.8
+- Refactoring
+- SMACSS (partial)
+- Never Check Email in the Morning
+
+Fiction
+
+- Enders Game, Speaker for the Dead, Xenocide
+- American Gods
+- The Endless War
+- Ancillary Justice
+- The Circle - Dave Eggers
+- Sharpe's X (peninsula war)
+- Sandman Overture
+
+Nothing buddhist!
