@@ -6,35 +6,50 @@ comments: true
 categories: 
 ---
 
-general reading experience - back to books over breakfast, holidays
+Inspired by [my friend's regular year of books posts](http://markos.gaivo.net/articles/books-i-read-in-2015.html) I thought I might write down what I read in 2015.
 
-Pregnancy
+I've got back into reading books a bit more this year, and one of the key things I've done is decide not to read the internet at certain times - over breakfast being one of the key times.  And I had a 2 week holiday in Scotland doing a litle light walking and a lot of reading :)
 
-Bump, Food of Love
-Bumpology
+Anyway, here are the books by theme:
 
-Politics, History etc
+## Pregnancy
 
-- The Joy of Tax
-- The Great War for Civilisation - Robert Fisk - started
+My partner became pregnant in 2015 so we of course read quite a bit about the process.
 
-Science, Tech, Work
+"[Bump - How to make, grow and birth a baby](http://www.cartoonkate.co.uk/bump-how-to-make-grow-and-birth-a-baby/)" and "[The Food of Love](http://www.cartoonkate.co.uk/the-food-of-love/)" (about breastfeeding) - both by the awesome Kate Evans.  She has a lot of sound advice (mostly backed up by evidence), a lovely voice and some very funny cartoons.  It's the only book I've seen that explicitly acknowledges lesbian couples throughout the book.  And the voice is by turns caring, witty and always supportive.  Highly recommended if you're heading that way or thinking about heading that way.
 
-- Irrationality
-- POODR
-- 2 Scoops of Django 1.8
-- Refactoring
-- SMACSS (partial)
-- Never Check Email in the Morning
+[Bumpology](http://www.lindageddes.com/books) is the book when you're getting tired or bewildered by all the conflicting advice you'll read, be told etc.  Written by a journalist for the New Scientist, this book is all about the evidence.  And refreshingly she presents the numbers involved in studies and translates risk into phrases like "so it would require 5000 woman to stop doing X to prevent one still birth".  Very nice.
 
-Fiction
+## Politics, History etc
 
-- Enders Game, Speaker for the Dead, Xenocide
-- American Gods
-- The Endless War
-- Ancillary Justice
-- The Circle - Dave Eggers
-- Sharpe's X (peninsula war)
-- Sandman Overture
+[The Joy of Tax](http://www.amazon.co.uk/The-Joy-Tax-Richard-Murphy/dp/059307517X) by Richard Murphy takes a fairly radical look at taxation and the part it makes in the modern state and economy. He explains that governments start by spending money and putting it into the economy, and tax is then used to regulate the money supply, enourage or discourage behaviour and a few other broad purposes.  Once you take on that view, it changes a lot of how you look at government, deficits and the rest.  A lot of his ideas have been used to make Corbynomics and I'm very happy to see the terms of the economic debate being greatly widened.  Well worth a read for a very different perspective to the usual neoliberal one.
 
-Nothing buddhist!
+The Great War for Civilisation by Robert Fisk is an epic history of the Middle East.  Fisk pulls no punches, and consequently the read borders on the traumatic for periods.  I put it down after one section detailing how one state had tortured various dissidents over time.  I'll pick it up again, but it's a hard read at times.
+
+## Science, Tech, Work
+
+Irrationality by Stuart Sutherland is a classic about the many ways the brain makes shortcuts that often serve as well, but in the modern world often lead us astray.  It's a fascinating read, but you'll probably remain just as irrational after reading it.
+
+[Practical Object Oriented Design in Ruby](http://www.poodr.com/book/) by Sandi Metz is a great book.  She is a wonderful communicator and a great programmer - look up [her talks on youtube](https://www.youtube.com/results?search_query=sandi+metz) sometime, they're excellent.  The book has really made me look afresh at the code I write, highly recommended.
+
+[2 Scoops of Django 1.8](https://www.twoscoopspress.com/products/two-scoops-of-django-1-8) is a collection of best practices for using the Django web framework, written by a couple who have been in the core of the Django community for many years.  Nothing earth shattering in there, but lots of solid stuff.  Generally, I'd start with their recommendations and only change if there is a good reason.
+
+Refactoring by Martin Fowler is one of those classics where the word has become part of the lexicon and then used and abused by all and sundry.  It is interesting to read the definition as "changing the internals of the code without changing the external behaviour".  So the idea is to get all the tests passing, and **then** refactor the code to improve it.  You may well improve it in a way that will make the next feature easy, but you're not making the change at that point.  As Kent Beck puts it "[for each desired change, make the change easy (warning: this may be hard), then make the easy change](https://twitter.com/kentbeck/status/250733358307500032)".  The refactorings presented are generally pretty low level, leading to a fine grained style of refactoring.
+
+SMACSS is a way to organise your CSS.  God knows I need a better way to do this, though since reading it I've not done much CSS.  I shall try to pick it up again when I do get back there.
+
+Rolling Rocks Downhill and The Phoenix Project are both novels about project management in an IT setting - the first more focussed on software development, the second more on Ops and DevOps.  I'm not sure they're the highest forms of literature, but they're surprisingly good page turners, and have plenty of good ideas for making projects run smoother.
+
+Never Check Email in the Morning was recommended on a blog I respect.  The style is relentlessly positive American business which can be a bit much.  But the content is generally sound, so if you're struggling to manage to keep on top of your work, you may well get some value out of this book.
+
+## Fiction
+
+This year I read the first 3 of the Enders series - Enders Game, Speaker for the Dead, Xenocide.  Fantastic sci-fi that gets beyond the initial premise into deep relationships, well formed characters and difficult quandaries.  The first book has less of that, but it's really the kicking off point for some sudden changes of gear.  I won't spoil things by talking about the plot.
+
+The Endless War is another classic sci-fi, looking at long wars and adapting back to society afterwards.  I enjoyed it but it's not one of the greatest I've read.  Ancillary Justice is a more recent sci-fi that has a different take on the world with a fairly amoral society producing a remnant of a warship looking for revenge.  It feels pretty fresh.
+
+The Circle by Dave Eggers is a near future distopia involving some sort of combination of Google and Facebook called The Circle.  Quite disturbing, if a little heavy handed in places.  "Sharing is Caring."
+
+I also came back (again) to Neil Gaiman, re-reading the lovely American Gods, really enjoying the prequel "Sandman Overture" - fantastic artwork and ideas - and also the beautifully illustrated "Sleeper and the Spindle".
+
+Nothing buddhist in 2015, which is unusual for me.  We'll see how I feel in 2016, though with a baby arriving imminently I may end up with less reading time ...
